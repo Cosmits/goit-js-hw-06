@@ -11,6 +11,7 @@ const inputEl = document.querySelector('input');
 
 
 createBtn.addEventListener('click', () => createBoxes(Number(inputEl.value)))
+destroyBtn.addEventListener('click', destroyBoxes)
 
 function createBoxes(amount) {
 
@@ -21,10 +22,10 @@ function createBoxes(amount) {
   const childElementCount = divBoxesEl.childElementCount;
   const divGroup = [];
 
-  for (let i = childElementCount; i < amount + childElementCount; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
 
     let num = i * 10 + 30;
-    const divStr = `<div style="width: ${num}px; height: ${num}px; background-color: ${getRandomHexColor()};">div</div>`
+    const divStr = `<div style="width: ${num}px; height: ${num}px; background-color: ${getRandomHexColor()};"></div>`
     divGroup.push(divStr);
 
   }
@@ -35,7 +36,4 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   divBoxesEl.innerHTML = '';
-
 }
-
-destroyBtn.addEventListener('click', destroyBoxes)
