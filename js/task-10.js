@@ -61,8 +61,8 @@ function createBoxes(amount) {
 
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
-    box.style.width = `size${px}`;
-    box.style.height = `size${px}`;
+    box.style.width = `${size}px`;
+    box.style.height = `${size}px`;
     //box.textContent = 'Box';
 
     boxesArr.push(box);
