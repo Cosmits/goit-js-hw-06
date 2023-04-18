@@ -24,7 +24,7 @@
 //   for (let i = childElementCount; i < amount + childElementCount; i += 1) {
 
 //     let num = i * 10 + 30;
-//     const divStr = `<div style="width: ${num}px; height: ${num}px; background-color: ${getRandomHexColor()};">div</div>`
+//     const divStr = `<div style="width: ${num}px; height: ${num}px; background-color: ${getRandomHexColor()};"></div>`
 //     divGroup.push(divStr);
 
 //   }
@@ -50,7 +50,7 @@ createBtn.addEventListener('click', () => createBoxes(Number(inputEl.value)));
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
- 
+
   const boxesArr = [];
 
   const childElementCount = boxes.childElementCount;
@@ -61,9 +61,9 @@ function createBoxes(amount) {
 
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
-    box.style.width = size + 'px';
-    box.style.height = size + 'px';
-    box.textContent = 'Box';
+    box.style.width = `size${px}`;
+    box.style.height = `size${px}`;
+    //box.textContent = 'Box';
 
     boxesArr.push(box);
   }
